@@ -1,0 +1,519 @@
+/* ==========================================================================
+   MARUF — LUXURY PERSONAL PORTFOLIO
+   Design System & Main CSS
+   Primary Brand: Dark Mode (Near-Black · Deep Navy · Champagne Gold)
+   Custom Light Mode: Soft Pearl Lavender · Misty Sky Blue · Cool Ivory · Deep Navy
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. CSS Custom Properties / Theme Variables
+   -------------------------------------------------------------------------- */
+
+:root,
+[data-theme="dark"] {
+  /* Core Backgrounds */
+  --bg-primary: #08090d;
+  --bg-secondary: #0b111e;
+  --bg-surface: #0e121a;
+  --bg-surface-elevated: #131924;
+  --bg-surface-glass: rgba(14, 18, 26, 0.82);
+  --bg-navy-deep: #0b111e;
+  --bg-navy-glow: rgba(22, 35, 60, 0.4);
+
+  /* Atmospheric Radial Lighting */
+  --atmosphere-radial-1: radial-gradient(circle, rgba(197, 168, 128, 0.06) 0%, rgba(11, 17, 30, 0.3) 50%, transparent 70%);
+  --atmosphere-radial-2: radial-gradient(circle, rgba(14, 26, 48, 0.4) 0%, rgba(8, 9, 13, 0.6) 60%, transparent 80%);
+  --atmosphere-grain-opacity: 0.025;
+
+  /* Text Colors */
+  --text-primary: #f4f4f7;
+  --text-secondary: #9094a6;
+  --text-tertiary: #65697a;
+  --text-inverse: #08090d;
+
+  /* Champagne Gold Accents */
+  --gold-primary: #c5a880;
+  --gold-light: #dfc299;
+  --gold-dark: #9a7d57;
+  --gold-muted: rgba(197, 168, 128, 0.14);
+  --gold-border: rgba(197, 168, 128, 0.22);
+  --gold-glow: rgba(197, 168, 128, 0.35);
+
+  /* Functional Accents & Borders */
+  --accent-green: #3bd652;
+  --accent-green-bg: rgba(59, 214, 82, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(197, 168, 128, 0.32);
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 50px rgba(197, 168, 128, 0.12);
+
+  /* Hero Stage Depth */
+  --stage-atmosphere-bg: radial-gradient(circle, rgba(20, 34, 60, 0.75) 0%, rgba(197, 168, 128, 0.08) 45%, transparent 70%);
+  --stage-glow-ring-border: rgba(197, 168, 128, 0.16);
+  --stage-lines-color: rgba(197, 168, 128, 0.35);
+  --portrait-drop-shadow: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 35px rgba(22, 36, 62, 0.5));
+
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(135deg, #dfc299 0%, #c5a880 100%);
+  --btn-primary-color: #08090d;
+  --btn-primary-shadow: 0 4px 20px rgba(197, 168, 128, 0.25);
+  --btn-primary-hover-shadow: 0 8px 30px rgba(197, 168, 128, 0.4);
+  --btn-secondary-bg: rgba(19, 25, 36, 0.6);
+  --btn-secondary-hover-bg: rgba(25, 33, 48, 0.85);
+
+  /* Form Elements */
+  --input-bg: rgba(8, 9, 13, 0.6);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus-border: #dfc299;
+  --input-focus-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+
+  /* Modal */
+  --modal-backdrop-bg: rgba(4, 5, 8, 0.88);
+  --modal-bg: #0e121a;
+  --modal-box-bg: rgba(255, 255, 255, 0.025);
+}
+
+/* --------------------------------------------------------------------------
+   Custom Light Mode: Pearl Lavender · Misty Blue · Cool Ivory · Deep Navy
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  /* Core Backgrounds */
+  --bg-primary: #f5f3fa;              /* Soft Pearl Lavender */
+  --bg-secondary: #eef4fa;            /* Misty Sky Blue */
+  --bg-surface: #fbfafd;              /* Soft Pearl / Warm Ivory */
+  --bg-surface-elevated: #f0edf8;     /* Slightly deeper pearl lavender */
+  --bg-surface-glass: rgba(251, 250, 253, 0.88);
+  --bg-navy-deep: #111827;            /* Deep navy accent tone */
+  --bg-navy-glow: rgba(146, 112, 59, 0.1);
+
+  /* Atmospheric Radial Lighting in Daylight */
+  --atmosphere-radial-1: radial-gradient(circle, rgba(215, 206, 235, 0.45) 0%, rgba(238, 244, 250, 0.3) 50%, transparent 70%);
+  --atmosphere-radial-2: radial-gradient(circle, rgba(196, 222, 245, 0.45) 0%, rgba(245, 243, 250, 0.5) 60%, transparent 80%);
+  --atmosphere-grain-opacity: 0.015;
+
+  /* Text Colors */
+  --text-primary: #111827;            /* Deep Navy / Charcoal */
+  --text-secondary: #4b5563;          /* Cool Slate */
+  --text-tertiary: #6b7280;          /* Muted Slate */
+  --text-inverse: #ffffff;
+
+  /* Muted Champagne Gold (Optimized for light background contrast) */
+  --gold-primary: #92703b;
+  --gold-light: #7e5c26;
+  --gold-dark: #624419;
+  --gold-muted: rgba(146, 112, 59, 0.09);
+  --gold-border: rgba(146, 112, 59, 0.28);
+  --gold-glow: rgba(146, 112, 59, 0.2);
+
+  /* Functional Accents & Borders */
+  --accent-green: #15803d;
+  --accent-green-bg: rgba(21, 128, 61, 0.1);
+  --border-subtle: rgba(17, 24, 39, 0.09);
+  --border-hover: rgba(146, 112, 59, 0.38);
+
+  /* Shadows in Light Mode */
+  --shadow-subtle: 0 4px 18px rgba(17, 24, 39, 0.04);
+  --shadow-card: 0 16px 36px -8px rgba(17, 24, 39, 0.08);
+  --shadow-glow: 0 0 40px rgba(146, 112, 59, 0.12);
+
+  /* Hero Stage Depth in Light Mode (Soft sky & lavender, no black glow) */
+  --stage-atmosphere-bg: radial-gradient(circle, rgba(200, 222, 245, 0.55) 0%, rgba(225, 218, 242, 0.45) 45%, transparent 72%);
+  --stage-glow-ring-border: rgba(146, 112, 59, 0.25);
+  --stage-lines-color: rgba(146, 112, 59, 0.2);
+  --portrait-drop-shadow: drop-shadow(0 15px 30px rgba(17, 24, 39, 0.14)) drop-shadow(0 4px 12px rgba(146, 112, 59, 0.1));
+
+  /* Buttons in Light Mode */
+  --btn-primary-bg: linear-gradient(135deg, #a4824c 0%, #8c6a34 100%);
+  --btn-primary-color: #ffffff;
+  --btn-primary-shadow: 0 4px 18px rgba(140, 106, 52, 0.28);
+  --btn-primary-hover-shadow: 0 8px 26px rgba(140, 106, 52, 0.4);
+  --btn-secondary-bg: #fbfafd;
+  --btn-secondary-hover-bg: #f0edf8;
+
+  /* Form Elements in Light Mode */
+  --input-bg: #ffffff;
+  --input-border: rgba(17, 24, 39, 0.14);
+  --input-focus-border: #92703b;
+  --input-focus-shadow: 0 0 0 3px rgba(146, 112, 59, 0.16);
+
+  /* Modal in Light Mode */
+  --modal-backdrop-bg: rgba(17, 24, 39, 0.5);
+  --modal-bg: #fbfafd;
+  --modal-box-bg: rgba(238, 244, 250, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   02. Global Shared Variables
+   -------------------------------------------------------------------------- */
+:root {
+  /* Typography */
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout Spacing */
+  --container-max: 1320px;
+  --container-pad: 2rem;
+  --section-spacing-y: 7.5rem;
+  --header-height: 80px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s var(--ease-luxury);
+  --transition-slow: 0.6s var(--ease-luxury);
+  --theme-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* --------------------------------------------------------------------------
+   03. Reset & Base Styles
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* --------------------------------------------------------------------------
+   04. Background Atmosphere & Ambient Lighting
+   -------------------------------------------------------------------------- */
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.atmosphere-radial-1 {
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 55vw;
+  height: 55vw;
+  border-radius: 50%;
+  background: var(--atmosphere-radial-1);
+  filter: blur(80px);
+  will-change: transform;
+  transition: background 0.6s ease;
+}
+
+.atmosphere-radial-2 {
+  position: absolute;
+  top: 40%;
+  left: -15%;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: var(--atmosphere-radial-2);
+  filter: blur(100px);
+  will-change: transform;
+  transition: background 0.6s ease;
+}
+
+.atmosphere-grain {
+  position: absolute;
+  inset: 0;
+  opacity: var(--atmosphere-grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* --------------------------------------------------------------------------
+   05. Custom Cursor (Discreet & Non-blocking)
+   -------------------------------------------------------------------------- */
+.cursor-dot, .cursor-circle {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--gold-light);
+}
+
+.cursor-circle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold-border);
+  transition: transform 0.15s ease-out, width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+body.hovering .cursor-circle {
+  width: 50px;
+  height: 50px;
+  border-color: var(--gold-light);
+  background-color: var(--gold-muted);
+}
+
+@media (pointer: coarse), (hover: none) {
+  .cursor-dot, .cursor-circle {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   06. Typography Hierarchy
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  transition: color 0.3s ease;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 4.8vw, 4.1rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.85rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 1.9vw, 1.75rem);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   07. Common Layout Containers & Badges
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.section {
+  padding-top: var(--section-spacing-y);
+  padding-bottom: var(--section-spacing-y);
+  position: relative;
+  transition: background-color 0.35s ease;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+  max-width: 760px;
+}
+
+.section-header.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Eyebrows & Status Pills */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--gold-light);
+  margin-bottom: 1.25rem;
+  background: var(--gold-muted);
+  border: 1px solid var(--gold-border);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  transition: var(--theme-transition);
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold-light);
+  box-shadow: 0 0 8px var(--gold-glow);
+  flex-shrink: 0;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  transition: var(--theme-transition);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+  animation: pulseGreen 2.2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   08. Premium Button System
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  box-shadow: var(--btn-primary-shadow);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--btn-primary-hover-shadow);
+}
+
+.btn-secondary {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-border);
+  background: var(--btn-secondary-hover-bg);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  color: var(--text-secondary);
+  padding: 0.75rem 1.25rem;
+}
+
+.btn-ghost:hover {
+  color: var(--gold-light);
+}
+
+.btn-icon {
+  width: 17px;
+  height: 17px;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   09. Dividers, Focus States & Utilities
+   -------------------------------------------------------------------------- */
+.hairline {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-border) 50%, transparent 100%);
+  border: none;
+}
+
+.text-gold {
+  color: var(--gold-light);
+}
+
+.text-center {
+  text-align: center;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--gold-muted);
+  color: var(--text-primary);
+}

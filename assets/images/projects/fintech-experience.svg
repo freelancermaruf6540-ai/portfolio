@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fin-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1b" />
+      <stop offset="50%" stop-color="#07090d" />
+      <stop offset="100%" stop-color="#0f1524" />
+    </linearGradient>
+    <linearGradient id="fin-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c5a880" />
+      <stop offset="100%" stop-color="#e8caa4" />
+    </linearGradient>
+    <filter id="fin-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#fin-bg)" />
+
+  <!-- Abstract Luxury Curved Grid lines -->
+  <g opacity="0.05" stroke="#c5a880" stroke-width="1">
+    <path d="M 0,100 Q 600,300 1200,100" fill="none" />
+    <path d="M 0,250 Q 600,450 1200,250" fill="none" />
+    <path d="M 0,400 Q 600,600 1200,400" fill="none" />
+    <path d="M 0,550 Q 600,750 1200,550" fill="none" />
+  </g>
+
+  <!-- Main Web App Terminal Window -->
+  <g transform="translate(130, 110)" filter="url(#fin-shadow)">
+    <rect x="0" y="0" width="680" height="580" rx="16" fill="#0d121c" stroke="#1d2638" stroke-width="1.5" />
+
+    <!-- Top Window Controls -->
+    <rect x="0" y="0" width="680" height="50" rx="16" fill="#131926" />
+    <circle cx="28" cy="25" r="5" fill="#ff5f56" opacity="0.8" />
+    <circle cx="48" cy="25" r="5" fill="#ffbd2e" opacity="0.8" />
+    <circle cx="68" cy="25" r="5" fill="#27c93f" opacity="0.8" />
+    <text x="340" y="30" fill="#757e93" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" letter-spacing="1">VELOX · WEALTH MANAGEMENT OS</text>
+
+    <!-- App Hero Banner -->
+    <g transform="translate(30, 75)">
+      <rect x="0" y="0" width="620" height="150" rx="12" fill="#141a29" stroke="#1f2a3f" stroke-width="1" />
+      <text x="30" y="42" fill="#7e889e" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1">TOTAL ASSETS UNDER ADVISEMENT</text>
+      <text x="30" y="85" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="34" font-weight="800">$18,492,600.00</text>
+      
+      <g transform="translate(30, 105)">
+        <rect x="0" y="0" width="115" height="24" rx="12" fill="rgba(39, 201, 63, 0.15)" />
+        <text x="57" y="16" fill="#3bd652" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">+28.4% YTD</text>
+        <text x="130" y="16" fill="#7e889e" font-family="-apple-system, sans-serif" font-size="11">Real-time settlement</text>
+      </g>
+    </g>
+
+    <!-- Dynamic Sparkline Graph & Portfolio Mix -->
+    <g transform="translate(30, 245)">
+      <!-- Line Chart -->
+      <rect x="0" y="0" width="400" height="200" rx="12" fill="#111624" stroke="#1d2639" stroke-width="1" />
+      <text x="24" y="32" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">Performance Yield vs Benchmark</text>
+      
+      <path d="M 24,160 C 80,140 140,165 200,110 C 260,60 320,85 376,45" fill="none" stroke="url(#fin-gold)" stroke-width="3" stroke-linecap="round" />
+      <path d="M 24,175 C 80,165 140,175 200,145 C 260,120 320,130 376,110" fill="none" stroke="#2c3a54" stroke-width="2" stroke-dasharray="4,4" />
+
+      <circle cx="376" cy="45" r="5" fill="#f4f4f7" stroke="#c5a880" stroke-width="3" />
+
+      <!-- Donut Allocation Mix -->
+      <g transform="translate(420, 0)">
+        <rect x="0" y="0" width="200" height="200" rx="12" fill="#111624" stroke="#1d2639" stroke-width="1" />
+        <text x="100" y="32" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Allocation</text>
+        
+        <circle cx="100" cy="100" r="45" fill="none" stroke="#1a2336" stroke-width="14" />
+        <circle cx="100" cy="100" r="45" fill="none" stroke="url(#fin-gold)" stroke-width="14" stroke-dasharray="160 282" transform="rotate(-90 100 100)" />
+        <circle cx="100" cy="100" r="45" fill="none" stroke="#3b5280" stroke-width="14" stroke-dasharray="70 282" stroke-dashoffset="-160" transform="rotate(-90 100 100)" />
+
+        <text x="100" y="105" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" text-anchor="middle">68%</text>
+        <text x="100" y="165" fill="#7e889e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">Global Equities</text>
+      </g>
+    </g>
+
+    <!-- Bottom Action Bar -->
+    <g transform="translate(30, 470)">
+      <rect x="0" y="0" width="620" height="75" rx="10" fill="#141a29" stroke="#1f2a3f" stroke-width="1" />
+      <text x="24" y="32" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Enterprise Security &amp; Zero Latency</text>
+      <text x="24" y="52" fill="#757e93" font-family="-apple-system, sans-serif" font-size="11">End-to-end encrypted biometric handshake with sub-50ms query execution.</text>
+      <rect x="490" y="20" width="105" height="35" rx="6" fill="url(#fin-gold)" />
+      <text x="542" y="42" fill="#08090d" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="middle">LAUNCH</text>
+    </g>
+  </g>
+
+  <!-- Right Floating Mobile App Mockup -->
+  <g transform="translate(850, 160)" filter="url(#fin-shadow)">
+    <rect x="0" y="0" width="220" height="460" rx="32" fill="#0c101a" stroke="#2b3850" stroke-width="3" />
+    <rect x="75" y="12" width="70" height="16" rx="8" fill="#182233" />
+
+    <!-- Mobile Screen -->
+    <g transform="translate(18, 50)">
+      <text x="0" y="18" fill="#7b8499" font-family="-apple-system, sans-serif" font-size="10" font-weight="600">PORTFOLIO</text>
+      <text x="0" y="42" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">$18.49M</text>
+
+      <rect x="0" y="60" width="184" height="90" rx="8" fill="#141b2b" />
+      <path d="M 12,120 Q 50,85 92,100 T 172,75" fill="none" stroke="url(#fin-gold)" stroke-width="2.5" />
+
+      <rect x="0" y="165" width="184" height="45" rx="8" fill="#141b2b" />
+      <circle cx="22" cy="187" r="10" fill="url(#fin-gold)" />
+      <text x="42" y="191" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Yield +12.4%</text>
+
+      <rect x="0" y="220" width="184" height="45" rx="8" fill="#141b2b" />
+      <circle cx="22" cy="242" r="10" fill="#3bd652" />
+      <text x="42" y="246" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Instant Wire</text>
+
+      <rect x="0" y="275" width="184" height="45" rx="8" fill="#141b2b" />
+      <circle cx="22" cy="297" r="10" fill="#3b5280" />
+      <text x="42" y="301" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Multi-Currency</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maruf — Digital Marketer · Web Developer · Graphic Designer · SEO Manager</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Personal portfolio of Maruf, a multidisciplinary digital professional combining Digital Marketing, Web Development, Graphic Design, and SEO Management to build high-performance digital experiences." />
+  <meta name="author" content="Maruf" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maruf — Digital Marketer · Web Developer · Graphic Designer · SEO Manager" />
+  <meta property="og:description" content="I build digital experiences that look great, perform better, and drive real growth." />
+  <meta property="og:image" content="assets/images/hero-portrait.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maruf — Multidisciplinary Digital Professional" />
+  <meta name="twitter:description" content="Strategy → Design → Development → SEO → Marketing → Growth" />
+  <meta name="twitter:image" content="assets/images/hero-portrait.png" />
+
+  <!-- Schema.org JSON-LD (Person Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maruf",
+    "jobTitle": "Digital Marketer, Web Developer, Graphic Designer & SEO Manager",
+    "email": "mailto:freelancermaruf6540@gmail.com",
+    "description": "Multidisciplinary digital professional providing end-to-end digital solutions from strategy and branding to high-performance development, technical SEO, and growth marketing.",
+    "knowsAbout": [
+      "Digital Marketing",
+      "Web Development",
+      "Graphic Design",
+      "SEO Management",
+      "Conversion Rate Optimization",
+      "Brand Identity"
+    ]
+  }
+  </script>
+
+  <!-- Anti-Flash Theme Determination Script (Inline in Head) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('maruf-theme');
+        var systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        var activeTheme = savedTheme || systemTheme;
+        document.documentElement.setAttribute('data-theme', activeTheme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts Preconnect & Display Swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Local Lucide Icon Library -->
+  <script src="assets/js/lucide.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+<body>
+
+  <!-- Background Atmosphere & Ambient Lighting Canvas -->
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="atmosphere-radial-1"></div>
+    <div class="atmosphere-radial-2"></div>
+    <div class="atmosphere-grain"></div>
+  </div>
+
+  <!-- Custom Cursor Follower (Desktop Only) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-circle" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       01. STICKY LUXURY NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <!-- Monogram Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Maruf - Home">
+        <div class="logo-monogram">M</div>
+        <div class="logo-text">
+          <span class="logo-name">MARUF</span>
+          <span class="logo-role">DIGITAL PROFESSIONAL</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (6 Focused Links to Prevent Crowding) -->
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions: Let's Talk + Minimal Theme Toggle -->
+      <div class="header-actions">
+        <!-- Theme Toggle Control (Moon/Sun) -->
+        <button class="theme-toggle" id="theme-toggle-desktop" aria-label="Toggle color theme" type="button">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-secondary" style="padding: 0.6rem 1.35rem; font-size: 0.82rem;">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-up-right" class="btn-icon"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About &amp; Manifesto</a></li>
+      <li><a href="#solution" class="mobile-nav-link">Full Solution Model</a></li>
+      <li><a href="#expertise" class="mobile-nav-link">Expertise &amp; Capabilities</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Selected Work</a></li>
+      <li><a href="#process" class="mobile-nav-link">Working Process</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Track Record</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Start a Project</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Open for select contracts</span>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle color theme" type="button">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+      </div>
+
+      <a href="mailto:freelancermaruf6540@gmail.com" style="color: var(--gold-light); font-size: 0.88rem; font-weight: 600;">
+        freelancermaruf6540@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         02. HERO SECTION (EDITORIAL 2-COLUMN COMPOSITION WITH NAVY SUIT PORTRAIT)
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Professional Positioning, Value & Action -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>AVAILABLE FOR SELECT PROJECTS</span>
+            </div>
+          </div>
+
+          <div class="hero-name-label">
+            <span>MARUF</span>
+            <span class="eyebrow-dot"></span>
+            <span>DIGITAL MARKETER · WEB DEVELOPER · GRAPHIC DESIGNER · SEO MANAGER</span>
+          </div>
+
+          <h1 class="hero-headline">
+            I build digital experiences that look great, <span class="text-gold">perform better</span>, and drive real growth.
+          </h1>
+
+          <p class="hero-lead">
+            I’m a multidisciplinary digital professional combining marketing, design, development, and SEO to build digital experiences that attract attention, earn trust, and drive measurable growth.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <i data-lucide="arrow-right" class="btn-icon"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Work Together</span>
+              <i data-lucide="mail" class="btn-icon"></i>
+            </a>
+          </div>
+
+          <!-- Hero Core Value Anchors -->
+          <div class="hero-credentials">
+            <div class="credential-item">
+              <span class="cred-num">4-in-1</span>
+              <span class="cred-label">Disciplines</span>
+            </div>
+            <div class="credential-item">
+              <span class="cred-num">End-to-End</span>
+              <span class="cred-label">Full Solution</span>
+            </div>
+            <div class="credential-item">
+              <span class="cred-num">Strategy</span>
+              <span class="cred-label">To Execution</span>
+            </div>
+            <div class="credential-item">
+              <span class="cred-num">100%</span>
+              <span class="cred-label">Client Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Authentic Navy Blue Suit Portrait Stage -->
+        <div class="hero-visual">
+          <div class="portrait-stage">
+            <!-- Atmospheric Depth Elements Behind Portrait -->
+            <div class="stage-atmosphere" aria-hidden="true"></div>
+            <div class="stage-glow-ring" aria-hidden="true"></div>
+            <div class="stage-lines" aria-hidden="true"></div>
+
+            <!-- Authentic Real Navy Blue Suit Photo Cutout -->
+            <img 
+              src="assets/images/hero-portrait.png" 
+              alt="Maruf in tailored navy blue suit and tie, multidisciplinary digital professional" 
+              class="hero-portrait-img"
+              loading="eager"
+            />
+
+            <!-- Single Minimal Subtle Badge (Non-intrusive, clear of face & tie) -->
+            <div class="hero-subtle-badge">
+              <span class="subtle-badge-dot"></span>
+              <span class="subtle-badge-text">Strategy → Design → Development → Growth</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         03. EDITORIAL MANIFESTO & ABOUT SECTION
+         ======================================================================== -->
+    <section class="manifesto-section" id="about">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 2rem;">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Multidisciplinary Manifesto</span>
+            <span class="eyebrow-dot"></span>
+          </div>
+        </div>
+
+        <blockquote class="manifesto-quote">
+          "I don't treat design, development, marketing and SEO as separate services. 
+          <span>I combine them</span> to create digital experiences that look strong, perform well, get discovered, and help businesses grow."
+        </blockquote>
+
+        <!-- 4 Core Pillars Matrix -->
+        <div class="pillars-matrix">
+          <div class="pillar-card reveal-on-scroll delay-1">
+            <div>
+              <div class="pillar-number">01 / DISCIPLINE</div>
+              <h3 class="pillar-title">Digital Marketing</h3>
+            </div>
+            <p class="pillar-desc">
+              Data-driven funnels, campaign planning, and audience acquisition designed to turn browsers into loyal customers.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-2">
+            <div>
+              <div class="pillar-number">02 / DISCIPLINE</div>
+              <h3 class="pillar-title">Web Development</h3>
+            </div>
+            <p class="pillar-desc">
+              Clean, responsive, lightning-fast web architecture built with precision code, ensuring flawless speed and scalability.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-3">
+            <div>
+              <div class="pillar-number">03 / DISCIPLINE</div>
+              <h3 class="pillar-title">Graphic Design</h3>
+            </div>
+            <p class="pillar-desc">
+              Bespoke visual identities, editorial typography, and high-impact marketing creatives that elevate brand prestige.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll delay-4">
+            <div>
+              <div class="pillar-number">04 / DISCIPLINE</div>
+              <h3 class="pillar-title">SEO Management</h3>
+            </div>
+            <p class="pillar-desc">
+              Semantic structured data, high-intent keyword positioning, and crawl optimization that captures organic search share.
+            </p>
+          </div>
+        </div>
+
+        <!-- Editorial Bio Split with Secondary Portrait -->
+        <div class="about-story-grid reveal-on-scroll">
+          <div class="about-portrait-frame">
+            <img src="assets/images/about-portrait.png" alt="Maruf, digital professional and growth strategist" class="about-portrait-img" loading="lazy" />
+            <div class="about-portrait-badge">
+              <div style="font-size: 0.72rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.25rem;">Unified Capability</div>
+              <div style="font-size: 0.92rem; font-weight: 700; color: var(--text-primary);">Strategy · Design · Code · SEO · Scale</div>
+            </div>
+          </div>
+
+          <div class="about-bio-content">
+            <div class="eyebrow" style="margin-bottom: 0.75rem;">
+              <span class="eyebrow-dot"></span>
+              <span>The Multidisciplinary Mindset</span>
+            </div>
+            <h3 class="about-bio-heading">
+              Bridging the gap between creative elegance and technical performance.
+            </h3>
+            <p class="about-bio-text">
+              Most digital projects fail not from lack of ambition, but from fragmentation. Designers create interfaces developers can't make fast. Developers write code marketers can't convert. Marketers run campaigns SEO specialists can't rank.
+            </p>
+            <p class="about-bio-text">
+              By mastering the entire continuum—from vector identity systems and modern web frameworks to deep search telemetry and paid media funnels—I deliver cohesive digital platforms where every discipline amplifies the next.
+            </p>
+
+            <div style="font-size: 0.76rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 700; margin-top: 1.5rem;">Core Toolkit &amp; Technical Proficiency</div>
+            <div class="about-tools-row">
+              <span class="capability-tag">Next.js</span>
+              <span class="capability-tag">TypeScript</span>
+              <span class="capability-tag">Adobe Illustrator</span>
+              <span class="capability-tag">Adobe Photoshop</span>
+              <span class="capability-tag">Figma</span>
+              <span class="capability-tag">Technical SEO</span>
+              <span class="capability-tag">Google Search Console</span>
+              <span class="capability-tag">Meta Ads Manager</span>
+              <span class="capability-tag">Google Ads</span>
+              <span class="capability-tag">Conversion Rate Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         04. THE FULL DIGITAL SOLUTION MODEL
+         ======================================================================== -->
+    <section class="section solution-section" id="solution">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Integrated Value Model</span>
+          </div>
+          <h2>One professional for the complete digital journey.</h2>
+          <p>
+            Traditional agencies hand off your project between siloed departments that don’t speak the same language. I bridge the entire continuum from strategic vision to technical launch and sustainable growth.
+          </p>
+        </div>
+
+        <!-- Visual Step Architecture Flow -->
+        <div class="pipeline-wrapper">
+          <div class="pipeline-grid">
+            
+            <div class="pipeline-step reveal-on-scroll delay-1">
+              <div class="step-header">
+                <span class="step-num">01</span>
+                <i data-lucide="compass" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">Strategy</h3>
+              <p class="step-desc">Market intelligence, audience profiling, positioning, and growth roadmaps.</p>
+            </div>
+
+            <div class="pipeline-step reveal-on-scroll delay-2">
+              <div class="step-header">
+                <span class="step-num">02</span>
+                <i data-lucide="palette" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">Branding</h3>
+              <p class="step-desc">Visual design systems, vector identity marks, and luxury typography rules.</p>
+            </div>
+
+            <div class="pipeline-step reveal-on-scroll delay-3">
+              <div class="step-header">
+                <span class="step-num">03</span>
+                <i data-lucide="code" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">Development</h3>
+              <p class="step-desc">High-performance frontend, semantic HTML5, zero bloat, and sub-second load times.</p>
+            </div>
+
+            <div class="pipeline-step reveal-on-scroll delay-4">
+              <div class="step-header">
+                <span class="step-num">04</span>
+                <i data-lucide="search" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">SEO</h3>
+              <p class="step-desc">Technical site audits, keyword intent mapping, and Schema.org architecture.</p>
+            </div>
+
+            <div class="pipeline-step reveal-on-scroll delay-5">
+              <div class="step-header">
+                <span class="step-num">05</span>
+                <i data-lucide="target" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">Marketing</h3>
+              <p class="step-desc">Omnichannel ad distribution, high-converting creative variants, and CRO funnels.</p>
+            </div>
+
+            <div class="pipeline-step reveal-on-scroll delay-6">
+              <div class="step-header">
+                <span class="step-num">06</span>
+                <i data-lucide="zap" class="step-arrow"></i>
+              </div>
+              <h3 class="step-name">Growth</h3>
+              <p class="step-desc">Continuous telemetry analytics, retention loops, and sustained market expansion.</p>
+            </div>
+
+          </div>
+
+          <!-- Bottom Callout -->
+          <div class="pipeline-callout reveal-on-scroll">
+            <div class="callout-text">
+              <strong>The Multidisciplinary Advantage:</strong> You avoid disjointed freelancers, mismatched handoffs, and conflicting advice. Every line of code is optimized for SEO, and every graphic is engineered for conversion.
+            </div>
+            <a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.82rem;">
+              <span>Discuss Your Journey</span>
+              <i data-lucide="arrow-right" class="btn-icon"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         05. EXPERTISE / 4 CORE DISCIPLINES
+         ======================================================================== -->
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Disciplines &amp; Capabilities</span>
+          </div>
+          <h2>Specialized craftsmanship across four essential pillars.</h2>
+          <p>
+            Each discipline represents practical execution, ongoing industry mastery, and a relentless focus on client business outcomes.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- 01 — Digital Marketing -->
+          <div class="service-card reveal-on-scroll delay-1">
+            <div>
+              <div class="service-card-top">
+                <span class="service-num">01 / DISCIPLINE</span>
+                <div class="service-icon-wrap">
+                  <i data-lucide="trending-up"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Digital Marketing</h3>
+              <p class="service-desc">
+                Engineering high-velocity customer acquisition funnels that balance scalable paid ad campaigns with organic audience growth and continuous conversion rate optimization (CRO).
+              </p>
+            </div>
+            <ul class="capability-tags">
+              <li class="capability-tag">Digital Marketing Strategy</li>
+              <li class="capability-tag">Social Media Marketing</li>
+              <li class="capability-tag">Campaign Planning</li>
+              <li class="capability-tag">Conversion Rate Optimization</li>
+              <li class="capability-tag">Audience Growth</li>
+              <li class="capability-tag">Full-Funnel Analytics</li>
+            </ul>
+          </div>
+
+          <!-- 02 — Web Development -->
+          <div class="service-card reveal-on-scroll delay-2">
+            <div>
+              <div class="service-card-top">
+                <span class="service-num">02 / DISCIPLINE</span>
+                <div class="service-icon-wrap">
+                  <i data-lucide="code"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-desc">
+                Architecting fast, responsive, and resilient web applications. Built on modern Jamstack foundations, accessible standards, and tactile micro-interactions that elevate brand credibility.
+              </p>
+            </div>
+            <ul class="capability-tags">
+              <li class="capability-tag">Responsive Web Architecture</li>
+              <li class="capability-tag">High-Converting Landing Pages</li>
+              <li class="capability-tag">Corporate &amp; Business Websites</li>
+              <li class="capability-tag">Modern Frontend Development</li>
+              <li class="capability-tag">Core Web Vitals Optimization</li>
+              <li class="capability-tag">Interactive User Interfaces</li>
+            </ul>
+          </div>
+
+          <!-- 03 — Graphic Design -->
+          <div class="service-card reveal-on-scroll delay-3">
+            <div>
+              <div class="service-card-top">
+                <span class="service-num">03 / DISCIPLINE</span>
+                <div class="service-icon-wrap">
+                  <i data-lucide="palette"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Graphic Design</h3>
+              <p class="service-desc">
+                Crafting memorable brand identities, promotional collateral, and high-engagement digital assets rooted in classical composition, typography balance, and modern luxury aesthetics.
+              </p>
+            </div>
+            <ul class="capability-tags">
+              <li class="capability-tag">Brand Identity Systems</li>
+              <li class="capability-tag">Social Media Creatives</li>
+              <li class="capability-tag">Marketing &amp; Ad Graphics</li>
+              <li class="capability-tag">Promotional Collateral</li>
+              <li class="capability-tag">Visual Communication</li>
+              <li class="capability-tag">Digital Vector Assets</li>
+            </ul>
+          </div>
+
+          <!-- 04 — SEO Management -->
+          <div class="service-card reveal-on-scroll delay-4">
+            <div>
+              <div class="service-card-top">
+                <span class="service-num">04 / DISCIPLINE</span>
+                <div class="service-icon-wrap">
+                  <i data-lucide="search"></i>
+                </div>
+              </div>
+              <h3 class="service-title">SEO Management</h3>
+              <p class="service-desc">
+                Systematic organic search visibility through rigorous commercial keyword clustering, technical crawl optimizations, semantic markup, and sustainable search engine authority.
+              </p>
+            </div>
+            <ul class="capability-tags">
+              <li class="capability-tag">Keyword Cluster Research</li>
+              <li class="capability-tag">On-Page SEO Optimization</li>
+              <li class="capability-tag">Technical SEO Audits</li>
+              <li class="capability-tag">Schema.org Structured Data</li>
+              <li class="capability-tag">Content Strategy &amp; Pillars</li>
+              <li class="capability-tag">Organic Search Discovery</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         06. PROFESSIONAL STATISTICS BAR (CREDIBLE & QUALITATIVE)
+         ======================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <div class="stat-block">
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="4">04</span>
+            </div>
+            <div class="stat-label">Core Disciplines</div>
+            <div class="stat-subtext">Marketing · Dev · Design · SEO</div>
+          </div>
+
+          <div class="stat-block">
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="5">05</span>
+              <span class="gold-plus">+</span>
+            </div>
+            <div class="stat-label">Years of Craft</div>
+            <div class="stat-subtext">Continuous Digital Execution</div>
+          </div>
+
+          <div class="stat-block">
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="100">100</span>
+              <span class="gold-plus">%</span>
+            </div>
+            <div class="stat-label">Responsive &amp; Accessible</div>
+            <div class="stat-subtext">Engineered to Standards</div>
+          </div>
+
+          <div class="stat-block">
+            <div class="stat-number-wrap">
+              <span style="font-family: var(--font-display); font-size: clamp(2.4rem, 3.8vw, 3.5rem); font-weight: 800; color: var(--text-primary);">Unified</span>
+            </div>
+            <div class="stat-label">End-to-End Delivery</div>
+            <div class="stat-subtext">Strategy through Execution</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         07. FEATURED CASE STUDIES (EDITORIAL PORTFOLIO)
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Featured Case Studies</span>
+          </div>
+          <h2>Work crafted with precision, purpose, and impact.</h2>
+          <p>
+            Explore selected case studies demonstrating high-performance web architecture, technical search optimization, and timeless brand identity design.
+          </p>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="projects-filter-bar" role="tablist" aria-label="Filter projects by discipline">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Disciplines</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Development</button>
+          <button class="filter-btn" data-filter="marketing" role="tab" aria-selected="false">Digital Marketing</button>
+          <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Graphic Design</button>
+          <button class="filter-btn" data-filter="seo" role="tab" aria-selected="false">SEO Management</button>
+        </div>
+
+        <!-- Editorial Projects Container -->
+        <div class="projects-container">
+          
+          <!-- PROJECT 01: Featured Large Split Card (Web Development & CRO) -->
+          <article class="project-card card-featured reveal-on-scroll" data-category="web">
+            <div class="project-info-area">
+              <div class="project-meta-row">
+                <span class="project-index">01</span>
+                <span class="project-category-badge">Web Development · CRO</span>
+              </div>
+              <h3 class="project-title">Enterprise SaaS Platform &amp; Conversion Architecture</h3>
+              <p class="project-summary">
+                Re-engineered a B2B cloud software portal with a focus on speed, accessible keyboard flows, and friction-free user onboarding.
+              </p>
+              
+              <div class="project-results-strip">
+                <div class="result-stat-item">
+                  <span class="result-stat-num">Sub-1s</span>
+                  <span class="result-stat-label">Page Load Benchmark</span>
+                </div>
+                <div class="result-stat-item">
+                  <span class="result-stat-num">100%</span>
+                  <span class="result-stat-label">Responsive Parity</span>
+                </div>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="btn btn-primary" data-open-case-study="apex-saas" type="button">
+                  <span>View Case Study</span>
+                  <i data-lucide="external-link" class="btn-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-visual-area">
+              <img src="assets/images/projects/saas-platform.svg" alt="Enterprise SaaS platform interface architecture" class="project-img" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- PROJECT 02: Asymmetric Split Card (SEO Management) -->
+          <article class="project-card card-reversed reveal-on-scroll" data-category="seo">
+            <div class="project-info-area">
+              <div class="project-meta-row">
+                <span class="project-index">02</span>
+                <span class="project-category-badge">SEO Management · Growth</span>
+              </div>
+              <h3 class="project-title">E-Commerce Search Infrastructure &amp; Traffic Growth</h3>
+              <p class="project-summary">
+                Built a systematic technical SEO foundation to capture high-intent search queries and eliminate site architecture bottlenecks.
+              </p>
+
+              <div class="project-results-strip">
+                <div class="result-stat-item">
+                  <span class="result-stat-num">Crawl-Clean</span>
+                  <span class="result-stat-label">Technical Health</span>
+                </div>
+                <div class="result-stat-item">
+                  <span class="result-stat-num">Structured</span>
+                  <span class="result-stat-label">Schema.org Deployed</span>
+                </div>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="btn btn-primary" data-open-case-study="seo-dominance" type="button">
+                  <span>View Case Study</span>
+                  <i data-lucide="external-link" class="btn-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-visual-area">
+              <img src="assets/images/projects/seo-dominance.svg" alt="Technical SEO telemetry and keyword structure diagram" class="project-img" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- SUBGRID: 2-Column Grid for Design & Marketing -->
+          <div class="projects-subgrid">
+            
+            <!-- PROJECT 03: Brand Identity & Graphic Design -->
+            <article class="project-card reveal-on-scroll" data-category="design">
+              <div class="project-visual-area" style="min-height: 320px;">
+                <img src="assets/images/projects/brand-system.svg" alt="Maison Vanguard luxury brand identity system" class="project-img" loading="lazy" />
+              </div>
+              <div class="project-info-area" style="padding: 2.5rem;">
+                <div class="project-meta-row">
+                  <span class="project-index">03</span>
+                  <span class="project-category-badge">Graphic Design · Branding</span>
+                </div>
+                <h3 class="project-title" style="font-size: 1.5rem;">Maison Vanguard: Luxury Brand Identity &amp; Visual System</h3>
+                <p class="project-summary">
+                  Designed a bespoke golden-ratio monogram, tactile stationery specifications, and Swiss typography guidelines for an ultra-luxury heritage brand.
+                </p>
+                <div class="project-card-actions" style="margin-top: 1rem;">
+                  <button class="btn btn-secondary" data-open-case-study="noir-brand" type="button">
+                    <span>View Case Study</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 04: Digital Marketing & Paid Acquisition -->
+            <article class="project-card reveal-on-scroll" data-category="marketing">
+              <div class="project-visual-area" style="min-height: 320px;">
+                <img src="assets/images/projects/digital-campaign.svg" alt="Omnichannel acquisition campaign and conversion funnel diagram" class="project-img" loading="lazy" />
+              </div>
+              <div class="project-info-area" style="padding: 2.5rem;">
+                <div class="project-meta-row">
+                  <span class="project-index">04</span>
+                  <span class="project-category-badge">Digital Marketing · Performance</span>
+                </div>
+                <h3 class="project-title" style="font-size: 1.5rem;">Omnichannel Acquisition Campaign &amp; Performance Funnel</h3>
+                <p class="project-summary">
+                  Structured a multi-tiered digital campaign architecture pairing high-impact creative variants with dedicated conversion-focused landing pages.
+                </p>
+                <div class="project-card-actions" style="margin-top: 1rem;">
+                  <button class="btn btn-secondary" data-open-case-study="omnichannel-growth" type="button">
+                    <span>View Case Study</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 05: Fintech Web Experience -->
+            <article class="project-card reveal-on-scroll" data-category="web">
+              <div class="project-visual-area" style="min-height: 320px;">
+                <img src="assets/images/projects/fintech-experience.svg" alt="Wealth management dashboard web application" class="project-img" loading="lazy" />
+              </div>
+              <div class="project-info-area" style="padding: 2.5rem;">
+                <div class="project-meta-row">
+                  <span class="project-index">05</span>
+                  <span class="project-category-badge">Web Development · UI/UX</span>
+                </div>
+                <h3 class="project-title" style="font-size: 1.5rem;">Institutional Wealth Management Web Dashboard</h3>
+                <p class="project-summary">
+                  Engineered a financial analytics portal presenting complex portfolio metrics with calm visual hierarchy and sub-second interaction feedback.
+                </p>
+                <div class="project-card-actions" style="margin-top: 1rem;">
+                  <button class="btn btn-secondary" data-open-case-study="velox-fintech" type="button">
+                    <span>View Case Study</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 06: Social Media Creatives & Ad Assets -->
+            <article class="project-card reveal-on-scroll" data-category="design">
+              <div class="project-visual-area" style="min-height: 320px;">
+                <img src="assets/images/projects/social-creatives.svg" alt="Digital marketing creative asset suite" class="project-img" loading="lazy" />
+              </div>
+              <div class="project-info-area" style="padding: 2.5rem;">
+                <div class="project-meta-row">
+                  <span class="project-index">06</span>
+                  <span class="project-category-badge">Graphic Design · Digital Media</span>
+                </div>
+                <h3 class="project-title" style="font-size: 1.5rem;">Digital Marketing Creatives &amp; Multi-Platform Asset Suite</h3>
+                <p class="project-summary">
+                  Crafted a cohesive collection of social media graphics, promotional banners, and campaign collateral designed to command attention in competitive feeds.
+                </p>
+                <div class="project-card-actions" style="margin-top: 1rem;">
+                  <button class="btn btn-secondary" data-open-case-study="creative-suite" type="button">
+                    <span>View Case Study</span>
+                    <i data-lucide="arrow-right" class="btn-icon"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         08. WORKING PROCESS ("HOW I WORK")
+         ======================================================================== -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Methodology</span>
+          </div>
+          <h2>A structured, results-oriented execution framework.</h2>
+          <p>
+            Every engagement follows a deliberate 6-step roadmap designed to eliminate ambiguity, guarantee speed to market, and ensure compounding business value.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          
+          <div class="process-card reveal-on-scroll delay-1">
+            <div class="process-step-indicator">
+              <span>PHASE 01</span>
+              <i data-lucide="compass"></i>
+            </div>
+            <h3 class="process-title">Discover</h3>
+            <p class="process-desc">Deep immersion into your business unit, ideal customer profile, current conversion bottlenecks, and competitive market landscape.</p>
+          </div>
+
+          <div class="process-card reveal-on-scroll delay-2">
+            <div class="process-step-indicator">
+              <span>PHASE 02</span>
+              <i data-lucide="git-branch"></i>
+            </div>
+            <h3 class="process-title">Strategize</h3>
+            <p class="process-desc">Architecting the full roadmap: positioning thesis, technical stack decisions, SEO cluster target list, and customer journey wireframes.</p>
+          </div>
+
+          <div class="process-card reveal-on-scroll delay-3">
+            <div class="process-step-indicator">
+              <span>PHASE 03</span>
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="process-title">Design</h3>
+            <p class="process-desc">Crafting high-fidelity UI prototypes, luxury typography systems, and high-impact marketing creatives engineered for immediate user trust.</p>
+          </div>
+
+          <div class="process-card reveal-on-scroll delay-4">
+            <div class="process-step-indicator">
+              <span>PHASE 04</span>
+              <i data-lucide="code"></i>
+            </div>
+            <h3 class="process-title">Develop</h3>
+            <p class="process-desc">Writing clean, modular code with sub-second performance, responsive precision, semantic markup, and frictionless interactive states.</p>
+          </div>
+
+          <div class="process-card reveal-on-scroll delay-5">
+            <div class="process-step-indicator">
+              <span>PHASE 05</span>
+              <i data-lucide="check-circle-2"></i>
+            </div>
+            <h3 class="process-title">Optimize</h3>
+            <p class="process-desc">Conducting technical SEO audits, Core Web Vitals profiling, mobile stress-testing, and rigorous conversion funnel validation.</p>
+          </div>
+
+          <div class="process-card reveal-on-scroll delay-6">
+            <div class="process-step-indicator">
+              <span>PHASE 06</span>
+              <i data-lucide="rocket"></i>
+            </div>
+            <h3 class="process-title">Grow</h3>
+            <p class="process-desc">Launching omnichannel marketing campaigns, tracking keyword positions, executing A/B tests, and scaling attributable performance.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         09. CAREER EXPERIENCE & TRACK RECORD
+         ======================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Track Record</span>
+          </div>
+          <h2>Professional experience &amp; verified execution.</h2>
+          <p>
+            A history of delivering digital transformation, revenue-generating websites, and high-ROI campaigns for diverse clients.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <!-- Timeline 01 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top-row">
+                <h3 class="timeline-role">Lead Digital Strategist &amp; Full-Stack Specialist</h3>
+                <span class="timeline-duration">2023 — PRESENT</span>
+              </div>
+              <div class="timeline-company">Independent Practice · Global Clients &amp; Direct Brands</div>
+              <ul class="timeline-achievements">
+                <li>Directing comprehensive digital solutions uniting web engineering, graphic design, and organic SEO.</li>
+                <li>Structuring technical search foundations and Schema.org architecture to capture sustainable organic visibility.</li>
+                <li>Designing accessible, high-performance web applications achieving sub-second load speeds and high Lighthouse fidelity.</li>
+              </ul>
+              <div class="timeline-tools">
+                <span class="capability-tag">Next.js</span>
+                <span class="capability-tag">Technical SEO</span>
+                <span class="capability-tag">Brand Strategy</span>
+                <span class="capability-tag">Conversion Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 02 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top-row">
+                <h3 class="timeline-role">Senior Performance Marketer &amp; Web Developer</h3>
+                <span class="timeline-duration">2021 — 2023</span>
+              </div>
+              <div class="timeline-company">Digital Media &amp; Growth Studio</div>
+              <ul class="timeline-achievements">
+                <li>Managed paid acquisition campaigns across Google and Meta with disciplined budget efficiency and creative testing.</li>
+                <li>Built custom landing pages with tailored user flows that eliminated drop-offs and improved customer trust.</li>
+                <li>Created vector identity kits, social ad assets, and brand design guidelines for emerging businesses.</li>
+              </ul>
+              <div class="timeline-tools">
+                <span class="capability-tag">Google Ads</span>
+                <span class="capability-tag">Meta Ads</span>
+                <span class="capability-tag">JavaScript / HTML5</span>
+                <span class="capability-tag">Adobe Illustrator</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 03 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-top-row">
+                <h3 class="timeline-role">Graphic Designer &amp; SEO Specialist</h3>
+                <span class="timeline-duration">2019 — 2021</span>
+              </div>
+              <div class="timeline-company">Digital Solutions Practice</div>
+              <ul class="timeline-achievements">
+                <li>Conducted exhaustive keyword research, on-page optimization, and competitive search gap analysis.</li>
+                <li>Designed high-impact marketing graphics, promotional layouts, and digital branding assets.</li>
+                <li>Collaborated closely with development teams to ensure design fidelity and responsive precision.</li>
+              </ul>
+              <div class="timeline-tools">
+                <span class="capability-tag">Photoshop</span>
+                <span class="capability-tag">Illustrator</span>
+                <span class="capability-tag">SEO Telemetry</span>
+                <span class="capability-tag">Web Standards</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. CLIENT ENDORSEMENTS
+         ======================================================================== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Client Endorsements</span>
+          </div>
+          <h2>Trusted by founders, executives, and digital leaders.</h2>
+          <p>
+            Hear firsthand how integrating strategy, design, development, and SEO transforms business performance.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div>
+              <div class="testimonial-quote-mark">“</div>
+              <p class="testimonial-text">
+                "Maruf is that rare professional who can design a stunning luxury identity, code a high-performance website, and then optimize it to rank on Google. Having one person master the entire spectrum made execution seamless."
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-avatar">JV</div>
+              <div>
+                <div class="testimonial-name">Julian Vance</div>
+                <div class="testimonial-role">Chief Operating Officer, Enterprise Partner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div>
+              <div class="testimonial-quote-mark">“</div>
+              <p class="testimonial-text">
+                "The clarity, speed, and design rigor Maruf brought to our digital marketing campaigns yielded our most efficient acquisition performance to date. Having one person master both the code and the creative was invaluable."
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-avatar">MS</div>
+              <div>
+                <div class="testimonial-name">Marcus Sterling</div>
+                <div class="testimonial-role">Managing Partner, Commerce Studio</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-3">
+            <div>
+              <div class="testimonial-quote-mark">“</div>
+              <p class="testimonial-text">
+                "His technical SEO strategy completely shifted our organic acquisition. We captured competitive search positions with organic authority. Maruf is a trusted partner for any serious digital initiative."
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-avatar">DT</div>
+              <div>
+                <div class="testimonial-name">David Thorne</div>
+                <div class="testimonial-role">VP of E-Commerce, Global Retail</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. PERSONAL BRAND PHILOSOPHY STATEMENT
+         ======================================================================== -->
+    <section class="philosophy-section">
+      <div class="container philosophy-container">
+        <div class="eyebrow" style="margin-bottom: 1.5rem;">
+          <span class="eyebrow-dot"></span>
+          <span>Core Philosophy</span>
+          <span class="eyebrow-dot"></span>
+        </div>
+        <h2 class="philosophy-title">
+          Good digital work isn't just about looking good. It should build trust, solve problems, <span class="text-gold">get discovered</span>, and drive real results.
+        </h2>
+        <p class="philosophy-sub">
+          When aesthetics, performance, search discovery, and marketing alignment work in concert, digital platforms become sustainable engines of business growth.
+        </p>
+        <a href="#contact" class="btn btn-primary">
+          <span>Build Something Exceptional</span>
+          <i data-lucide="arrow-right" class="btn-icon"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         12. CONTACT / FINAL CTA & ACCESSIBLE INQUIRY FORM
+         ======================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Initiate Collaboration</span>
+          </div>
+          <h2>Have a project in mind? Let's turn your idea into something exceptional.</h2>
+          <p>
+            Whether you need a complete end-to-end digital solution or specialized excellence in web development, design, or SEO, let's discuss your objectives.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left: Direct Contact Channels & Availability -->
+          <div class="contact-info-col">
+            <div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 0.75rem;">Direct Channels</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                I partner with a select number of visionary clients each quarter to guarantee uncompromising attention to detail and direct communication.
+              </p>
+
+              <div class="contact-direct-list">
+                
+                <div class="contact-item">
+                  <div class="contact-icon-box">
+                    <i data-lucide="mail"></i>
+                  </div>
+                  <div>
+                    <div class="contact-lbl">Email Inquiry</div>
+                    <a href="mailto:freelancermaruf6540@gmail.com" class="contact-val">freelancermaruf6540@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon-box">
+                    <i data-lucide="clock"></i>
+                  </div>
+                  <div>
+                    <div class="contact-lbl">Current Local Time</div>
+                    <div class="contact-val" id="local-time-clock">Checking time...</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon-box">
+                    <i data-lucide="shield-check"></i>
+                  </div>
+                  <div>
+                    <div class="contact-lbl">Availability Status</div>
+                    <div class="contact-val" style="color: var(--accent-green); font-size: 0.95rem;">● Open for Select Contracts</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="timezone-pill">
+              <i data-lucide="globe" style="width: 16px; height: 16px; color: var(--gold-light);"></i>
+              <span>Global Remote Collaboration · Typical Response Within 24 Hours</span>
+            </div>
+          </div>
+
+          <!-- Right: Accessible Project Inquiry Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" novalidate>
+              
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Name / Organization *</label>
+                <input 
+                  type="text" 
+                  id="form-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="e.g. Julian Vance, Apex Partners" 
+                  required 
+                  aria-describedby="form-name-error"
+                />
+                <div id="form-name-error" class="form-field-error" role="alert"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">Email Address *</label>
+                <input 
+                  type="email" 
+                  id="form-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="julian@example.com" 
+                  required 
+                  aria-describedby="form-email-error"
+                />
+                <div id="form-email-error" class="form-field-error" role="alert"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Required Disciplines (Select all that apply)</label>
+                <div class="project-type-pills">
+                  <div class="pill-option">
+                    <input type="checkbox" id="disc-full" name="discipline" value="full-solution" checked />
+                    <label for="disc-full">Complete Digital Solution</label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="checkbox" id="disc-web" name="discipline" value="web-dev" />
+                    <label for="disc-web">Web Development</label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="checkbox" id="disc-marketing" name="discipline" value="marketing" />
+                    <label for="disc-marketing">Digital Marketing</label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="checkbox" id="disc-design" name="discipline" value="design" />
+                    <label for="disc-design">Graphic Design</label>
+                  </div>
+                  <div class="pill-option">
+                    <input type="checkbox" id="disc-seo" name="discipline" value="seo" />
+                    <label for="disc-seo">SEO Management</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">Project Overview &amp; Objectives *</label>
+                <textarea 
+                  id="form-message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Tell me about your business, current timeline, and what success looks like for this engagement..." 
+                  required
+                  aria-describedby="form-message-error"
+                ></textarea>
+                <div id="form-message-error" class="form-field-error" role="alert"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Project Inquiry</span>
+                <i data-lucide="send" class="btn-icon"></i>
+              </button>
+
+              <div id="contact-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       13. MINIMAL LUXURY FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-row">
+        <a href="#hero" class="brand-logo" aria-label="Maruf - Home">
+          <div class="logo-monogram">M</div>
+          <div class="logo-text">
+            <span class="logo-name">MARUF</span>
+            <span class="logo-role">DIGITAL PROFESSIONAL</span>
+          </div>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#solution" class="footer-link">Full Solution</a></li>
+          <li><a href="#expertise" class="footer-link">Expertise</a></li>
+          <li><a href="#projects" class="footer-link">Work</a></li>
+          <li><a href="#process" class="footer-link">Process</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+
+        <button class="back-to-top" aria-label="Back to top of page" type="button">
+          <span>Back to Top</span>
+          <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+        </button>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          &copy; 2026 Maruf. All rights reserved. Strategy · Design · Development · SEO · Marketing.
+        </div>
+        <div style="color: var(--text-tertiary);">
+          Crafted &amp; Engineered for High-Performance Client Engagement.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       14. INTERACTIVE CASE STUDY MODAL BACKDROP (ACCESSIBLE DIALOG)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Case study details">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close case study modal" type="button">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div class="modal-body">
+        <!-- Injected dynamically by assets/js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/motion.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Initialize Lucide icons on page load
+    lucide.createIcons();
+
+    // Re-render icons on modal updates
+    var modalObserver = new MutationObserver(function() {
+      lucide.createIcons();
+    });
+    var modalBodyEl = document.querySelector('.modal-body');
+    if (modalBodyEl) {
+      modalObserver.observe(modalBodyEl, { childList: true, subtree: true });
+    }
+  </script>
+</body>
+</html>

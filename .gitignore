@@ -1,0 +1,10 @@
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Duplicate raw screenshots in root (assets are inside assets/images/)
+ChatGPT Image*.png

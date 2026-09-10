@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131d" />
+      <stop offset="50%" stop-color="#08090d" />
+      <stop offset="100%" stop-color="#141c2c" />
+    </linearGradient>
+    <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9d3b4" />
+      <stop offset="50%" stop-color="#c5a880" />
+      <stop offset="100%" stop-color="#9a7a50" />
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="800" fill="url(#brand-bg)" />
+
+  <!-- Geometric Grid Accent -->
+  <g opacity="0.05" stroke="#c5a880" stroke-width="0.75">
+    <circle cx="600" cy="400" r="100" fill="none" />
+    <circle cx="600" cy="400" r="220" fill="none" />
+    <circle cx="600" cy="400" r="360" fill="none" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="200" y1="0" x2="1000" y2="800" />
+    <line x1="1000" y1="0" x2="200" y2="800" />
+  </g>
+
+  <!-- Left: Luxury Stationery Card -->
+  <g transform="translate(140, 150) rotate(-4)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="360" height="500" rx="8" fill="#101522" stroke="#253046" stroke-width="1.5" />
+    <!-- Gold Embossed Monogram -->
+    <rect x="40" y="50" width="48" height="48" rx="6" fill="url(#gold-foil)" />
+    <text x="64" y="81" fill="#0c101a" font-family="'Times New Roman', serif" font-size="28" font-weight="bold" text-anchor="middle">M</text>
+    
+    <text x="40" y="145" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="3">MAISON VANGUARD</text>
+    <text x="40" y="170" fill="#c5a880" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="4">HAUTE HORLOGERIE &amp; DESIGN</text>
+    
+    <line x1="40" y1="200" x2="320" y2="200" stroke="#202a3d" stroke-width="1" />
+
+    <text x="40" y="240" fill="#757e93" font-family="-apple-system, sans-serif" font-size="11" line-height="1.6">
+      <tspan x="40" dy="0">A masterclass in restraint, tactile luxury,</tspan>
+      <tspan x="40" dy="18">and timeless geometric harmony.</tspan>
+      <tspan x="40" dy="18">Crafted for discriminating global collectors.</tspan>
+    </text>
+
+    <!-- Color Swatches -->
+    <g transform="translate(40, 340)">
+      <rect x="0" y="0" width="55" height="55" rx="4" fill="#08090d" stroke="#2a354a" stroke-width="1" />
+      <text x="27" y="70" fill="#6d7588" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">#08090D</text>
+
+      <rect x="70" y="0" width="55" height="55" rx="4" fill="#0c1320" stroke="#2a354a" stroke-width="1" />
+      <text x="97" y="70" fill="#6d7588" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">#0C1320</text>
+
+      <rect x="140" y="0" width="55" height="55" rx="4" fill="#c5a880" />
+      <text x="167" y="70" fill="#dfc299" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">#C5A880</text>
+
+      <rect x="210" y="0" width="55" height="55" rx="4" fill="#f4f4f7" />
+      <text x="237" y="70" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">#F4F4F7</text>
+    </g>
+
+    <text x="40" y="465" fill="#4d5568" font-family="-apple-system, sans-serif" font-size="10" letter-spacing="1">SYSTEM GUIDELINE SPECIFICATION · V3.2</text>
+  </g>
+
+  <!-- Right: Brand Guidelines & Logo Construction Stage -->
+  <g transform="translate(560, 140)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="520" height="520" rx="14" fill="#0f1422" stroke="#243048" stroke-width="1.5" />
+
+    <!-- Top bar -->
+    <rect x="0" y="0" width="520" height="54" rx="14" fill="#151d2f" />
+    <text x="30" y="33" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="1">GEOMETRIC EMBLEM ARCHITECTURE</text>
+    <rect x="420" y="16" width="75" height="22" rx="11" fill="rgba(197, 168, 128, 0.15)" />
+    <text x="457" y="31" fill="#dfc299" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">GOLDEN RATIO</text>
+
+    <!-- Blueprint Construction Stage -->
+    <g transform="translate(260, 240)">
+      <!-- Construction Circles -->
+      <circle cx="0" cy="0" r="130" fill="none" stroke="#253550" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="0" cy="0" r="90" fill="none" stroke="#253550" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#c5a880" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+      
+      <!-- Crosshairs -->
+      <line x1="-150" y1="0" x2="150" y2="0" stroke="#253550" stroke-width="1" />
+      <line x1="0" y1="-150" x2="0" y2="150" stroke="#253550" stroke-width="1" />
+      
+      <!-- Primary Gold Insignia -->
+      <path d="M 0 -70 L 60 40 L -60 40 Z" fill="none" stroke="url(#gold-foil)" stroke-width="3" stroke-linejoin="round" />
+      <path d="M 0 70 L -60 -40 L 60 -40 Z" fill="none" stroke="url(#gold-foil)" stroke-width="3" stroke-linejoin="round" />
+      <circle cx="0" cy="0" r="18" fill="url(#gold-foil)" />
+    </g>
+
+    <!-- Typography Specs at Bottom -->
+    <g transform="translate(30, 420)">
+      <line x1="0" y1="0" x2="460" y2="0" stroke="#1d273c" stroke-width="1" />
+      <text x="0" y="30" fill="#7f889e" font-family="-apple-system, sans-serif" font-size="10" letter-spacing="1">PRIMARY TYPEFACE: SYNE DISPLAY &amp; PLUS JAKARTA SANS</text>
+      <text x="0" y="58" fill="#f4f4f7" font-family="-apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="2">Aa Bb Cc Dd Ee Ff Gg 0123456789</text>
+    </g>
+  </g>
+</svg>
